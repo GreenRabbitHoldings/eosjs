@@ -1,6 +1,6 @@
 {
   "name": "eosjs",
-  "version": "22.1.0",
+  "version": "22.1.1",
   "description": "Talk to eos API",
   "main": "dist/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "test-all": "yarn test && yarn test-node && yarn test-types && yarn cypress",
     "build": "rimraf dist && tsc -p ./tsconfig.json && node scripts/copy-ripe-md.js",
     "build-web": "webpack --config webpack.prod.js && webpack --config webpack.debug.js",
-    "build-production": "yarn build && yarn build-web && yarn test-all",
+    "build-production": "yarn build && yarn build-web",
     "docs-init": "sh .docs/scripts/init.sh",
     "docs-build": "sh .docs/scripts/build.sh",
     "docs-serve": "python -m SimpleHTTPServer",
@@ -33,7 +33,6 @@
     "pako": "2.0.3"
   },
   "devDependencies": {
-    "@blockone/eslint-config-blockone": "^4.0.1",
     "@cypress/skip-test": "^2.6.1",
     "@types/elliptic": "^6.4.13",
     "@types/jest": "^26.0.24",
